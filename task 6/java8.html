@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findSecondLowestAndSecondGreatest(numbers) {
+  if (numbers.length < 2) {
+    return "Array should contain at least two numbers";
+  }
+  const sortedNumbers = numbers.sort((a, b) => a - b);
+  const uniqueSortedNumbers = [...new Set(sortedNumbers)];
+
+  if (uniqueSortedNumbers.length < 2) {
+    return "Array should contain at least two unique numbers";
+  }
+  const secondLowest = uniqueSortedNumbers[1];
+  const secondGreatest = uniqueSortedNumbers[uniqueSortedNumbers.length - 2];
+
+  return `${secondLowest},${secondGreatest}`;
+}
+const numbers = [1, 2, 3, 4, 5];
+const result = findSecondLowestAndSecondGreatest(numbers);
+console.log(result);
+    </script>
+</body>
+</html>

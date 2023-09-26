@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isJanuary1stSunday(year) {
+  const date = new Date(year, 0, 1); 
+  return date.getDay() === 0;
+}
+for (let year = 2014; year <= 2050; year++) {
+  if (isJanuary1stSunday(year)) {
+    console.log(`January 1st, ${year} is a Sunday.`);
+  }
+}
+
+    </script>
+</body>
+</html>
